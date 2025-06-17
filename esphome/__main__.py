@@ -54,7 +54,6 @@ from esphome.util import (
 
 _LOGGER = logging.getLogger(__name__)
 
-
 def choose_prompt(options, purpose: str = None):
     if not options:
         raise EsphomeError(
@@ -146,7 +145,7 @@ def run_miniterm(config, port, args):
     if baud_rate == 0:
         _LOGGER.info("UART logging is disabled (baud_rate=0). Not starting UART logs.")
         return 1
-    _LOGGER.info("Starting log output from %s with baud rate %s", port, baud_rate)
+    _LOGGER.info("Starting to log output from %s with baud rate %s", port, baud_rate)
 
     backtrace_state = False
     ser = serial.Serial()
